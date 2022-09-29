@@ -20,6 +20,12 @@
     <p>
         Description: {{ event.description }}
     </p>
+    <p>
+        {% if event.recurring %}
+        <span>This event is recurring</span>
+        {% else %}
+        {% endif %}
+    </p>
     <hr>
 </div>
 {% endfor %}
@@ -47,9 +53,5 @@
       </div>
       <input type="submit">
     </form>
-
-
-
-
 
 {% endblock %}
